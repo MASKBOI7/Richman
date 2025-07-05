@@ -1,14 +1,30 @@
 let money = parseInt(localStorage.getItem("money")) || 0;
+let level = parseInt(localStorage.getItem("level")) || 1;
+
+function getEarningAmount(level) {
+  if (level >= 15) return 5000;
+  return 1 + Math.floor((level - 1) * (4999 / 14)); // spread from $1 to $5000
+}
 
 function earnMoney() {
-  money += 100;
+  const earned = getEarningAmount(level);
+  money += earned;
   localStorage.setItem("money", money);
-  updateMoneyDisplay();
+  updateDisplay();
 }
 
-function updateMoneyDisplay() {
-  document.getElementById("money-display").innerText = `Your Balance: ₹${money}`;
+function levelUp() {
+  if (level < 15) {
+    level++;
+    localStorage.setItem("level", level);
+    updateDisplay();
+  }
 }
 
-// On load
-updateMoneyDisplay();
+function updateDisplay() {
+  document.getElementById("money-display").innerText = `Your Balance: $${money}`;
+  document.getElementById("cardAmount").innerText = `$${money}`;
+  document.getElementById("level-display").innerText = `Level ${level} — +$${getEarningAmount(level)} per click`;
+}
+
+updateDisplay();
