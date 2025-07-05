@@ -64,3 +64,33 @@ h2 {
   font-size: 20px;
   color: #ffffff;
 }
+.credit-card {
+  height: 200px;
+  width: 120px;
+  background: linear-gradient(135deg, #7b2cbf, #1e1e2f);
+  border-radius: 20px;
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(125, 93, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+}
+
+.card-corner {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.card-amount {
+  font-size: 24px;
+  margin-top: 20px;
+  text-shadow: 0 0 5px #9d4edd;
+}
