@@ -9,11 +9,14 @@
     <h2>Welcome, <span id="user"></span> 👑</h2>
 
     <div id="tab-content" class="tab-content">
-      <h3>💼 Tap “Earning” to begin your empire!</h3>
+      <h3>💰 Earning Tab</h3>
+      <p>Click to earn ₹100</p>
+      <button onclick="earnMoney()" class="earn-btn">💵 Earn</button>
+      <p id="money-display"></p>
     </div>
 
     <div class="bottom-nav">
-      <button onclick="switchTab('earning')" class="center-tab">💰 Earning</button>
+      <button class="center-tab" disabled>💰 Earning</button>
     </div>
   </div>
 
