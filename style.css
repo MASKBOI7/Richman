@@ -84,3 +84,37 @@ button:hover {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 2px solid #9d4edd;
+}
+
+.center-tab {
+  background-color: #7b2cbf;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 12px #9d4edd;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.center-tab:hover {
+  background-color: #9d4edd;
+  transform: scale(1.05);
+}
+
+.tab-content {
+  margin: 50px auto 120px;
+  min-height: 180px;
+}
