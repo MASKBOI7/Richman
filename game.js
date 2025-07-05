@@ -7,7 +7,7 @@ function getEarningAmount(level) {
 }
 
 function getRequiredForNextLevel(level) {
-  return 500 + (level - 1) * 1000; // Example: scalable target
+  return 500 + (level - 1) * 1000; // Custom scaling
 }
 
 function earnMoney() {
@@ -25,7 +25,6 @@ function earnMoney() {
 }
 
 function updateDisplay() {
-  const earning = getEarningAmount(level);
   const nextLevelGoal = getRequiredForNextLevel(level);
   const progress = Math.min(100, (money / nextLevelGoal) * 100);
 
