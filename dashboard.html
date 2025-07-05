@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Business Empire: Richman</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
   <div class="game-screen">
-    <h2>Welcome, <span id="user"></span> 👑</h2>
+    <div class="credit-card-horizontal">
+      <div class="card-title">Business Card</div>
+      <div class="card-balance" id="cardAmount">$0</div>
+      <div class="card-code">77XX77</div>
+    </div>
 
-    <div id="tab-content" class="tab-content">
-      <div class="credit-card">
-        <div class="card-corner">77XX77</div>
-        <div class="card-amount" id="cardAmount">$0</div>
-      </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-      <div id="level-display" class="level-info"></div>
-      <button onclick="earnMoney()" class="earn-btn">💵 Earn</button>
-      <button onclick="levelUp()" class="level-up-btn">⬆️ Level Up</button>
-      <p id="money-display"></p>
+    <div onclick="earnMoney()" class="earn-zone">
+      💵 Tap to Earn
     </div>
 
     <div class="bottom-nav">
@@ -28,8 +22,6 @@
   <script>
     const user = localStorage.getItem("currentUser");
     if (!user) location.href = "index.html";
-    document.getElementById("user").innerText = user;
   </script>
   <script src="game.js"></script>
 </body>
-</html>
