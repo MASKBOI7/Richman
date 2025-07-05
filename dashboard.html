@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Business Empire: Richman</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="game-screen">
     <h2>Welcome, <span id="user"></span> 👑</h2>
-    <button onclick="logout()">Logout</button>
+
+    <div id="tab-content" class="tab-content">
+      <h3>💼 Tap “Earning” to begin your empire!</h3>
+    </div>
+
+    <div class="bottom-nav">
+      <button onclick="switchTab('earning')" class="center-tab">💰 Earning</button>
+    </div>
   </div>
 
   <script>
     const user = localStorage.getItem("currentUser");
-    if (!user) {
-      window.location.href = "index.html";
-    } else {
-      document.getElementById("user").innerText = user;
-    }
-
-    function logout() {
-      localStorage.removeItem("currentUser");
-      localStorage.removeItem("remember");
-      window.location.href = "index.html";
-    }
+    if (!user) location.href = "index.html";
+    document.getElementById("user").innerText = user;
   </script>
+  <script src="game.js"></script>
 </body>
 </html>
