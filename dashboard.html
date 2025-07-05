@@ -1,19 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Business Empire: Richman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <div class="game-screen">
+    <!-- Credit Card -->
     <div class="credit-card-horizontal">
-      <div class="card-title">Business Card</div>
+      <div class="card-title">Business Balance</div>
       <div class="card-balance" id="cardAmount">$0</div>
       <div class="card-code">77XX77</div>
     </div>
 
+    <!-- Progress to Next Level -->
     <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <div onclick="earnMoney()" class="earn-zone">
+    <!-- Earn Area -->
+    <div class="earn-zone" onclick="earnMoney()">
       💵 Tap to Earn
     </div>
 
+    <!-- Bottom Nav -->
     <div class="bottom-nav">
       <button class="center-tab" disabled>💰 Earning</button>
     </div>
@@ -25,3 +35,4 @@
   </script>
   <script src="game.js"></script>
 </body>
+</html>
