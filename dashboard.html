@@ -9,9 +9,14 @@
     <h2>Welcome, <span id="user"></span> 👑</h2>
 
     <div id="tab-content" class="tab-content">
-      <h3>💰 Earning Tab</h3>
-      <p>Click to earn ₹100</p>
+      <div class="credit-card">
+        <div class="card-corner">77XX77</div>
+        <div class="card-amount" id="cardAmount">$0</div>
+      </div>
+
+      <div id="level-display" class="level-info"></div>
       <button onclick="earnMoney()" class="earn-btn">💵 Earn</button>
+      <button onclick="levelUp()" class="level-up-btn">⬆️ Level Up</button>
       <p id="money-display"></p>
     </div>
 
@@ -28,7 +33,3 @@
   <script src="game.js"></script>
 </body>
 </html>
-<div class="credit-card">
-  <div class="card-corner">77XX77</div>
-  <div class="card-amount" id="cardAmount">$1000</div>
-</div>
